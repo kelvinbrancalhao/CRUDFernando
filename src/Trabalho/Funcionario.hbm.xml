@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="trabalhoQC">
+	<class name="Funcionario" table="FUNCIONARIO">
+		<id name="id" column="ID_F" type="integer">
+			<generator class="increment"/>
+		</id>
+		<property name="nome" column="NOME_F" type="string" />
+		<property name="cargo" column="CARGO_F" type="string" />
+		<property name="cpf" column="CPF_F" type="integer" />
+		<property name="cidade" column="CIDADE_F" type="string" />
+		<property name="estado" column="ESTADO_F" type="string" />
+		<property name="end" column="END_F" type="string" />
+		<property name="cep" column="CEP_F" type="integer" />
+		<property name="tel" column="TEL_F" type="integer" />
+		<property name="rg" column="RG_F" type="integer" />
+		<many-to-one name="emp" column="EMP_F" class="Empresa"/>
+	</class>
+</hibernate-mapping>
